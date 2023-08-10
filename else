@@ -1,0 +1,50 @@
+It is safe to check the activation date and use current date if null 
+        if ( actdate == null ) { 
+            setCreateDate(new Date()); 
+            setActivateDate(new Date()); 
+        } 
+        else { 
+            setCreateDate(actdate); 
+            setActivateDate(actdate); 
+        } 
+         
+	   	setDeActivateDate(deactdate); 
+        setSalutation(salutation); 
+        setIsEnabled(enabled); 
+        setUniqueDeviceId(uniqueDeviceId); 
+        setIsPrepay(isprepay); 
+    } 
+ 
+    public SampleUserImpl(User inUser) { 
+     
+        fInfo = new Hashtable(); 
+         
+        setLoginId(inUser.getLoginId()); 
+        setFirstName(inUser.getFirstName()); 
+        setLastName(inUser.getLastName()); 
+        setMiddleName(inUser.getMiddleName()); 
+        setGender(inUser.getGender()); 
+        setStreet1(inUser.getStreet1()); 
+        setStreet2(inUser.getStreet2()); 
+        setCity(inUser.getCity()); 
+        setState(inUser.getState()); 
+        setPostalCode(inUser.getPostalCode()); 
+        setCountry(inUser.getCountry()); 
+        setEmail(inUser.getEmail()); 
+        setPhone(inUser.getPhone()); 
+        setSalutation(inUser.getSalutation()); 
+        setIsEnabled(inUser.isEnabled()); 
+        setPassword(inUser.getPassword()); 
+        setUniqueDeviceId(inUser.getUniqueDeviceId()); 
+    } 
+ 
+ 
+	// It is sometime useful to have the corresponding external user data as a 
+  // hashtable 
+    public Hashtable getExternalUserData()  
+    { 
+    	// Create a hash table  
+		Hashtable externalData = new Hashtable(); 
+		// Get all the external data from fInfo and update the external data 
+		// externalData = parserUser(fInfo); 
+        return externalData; 
